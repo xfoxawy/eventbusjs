@@ -1,5 +1,5 @@
 {
-  "name": "eventbusjs",
+  "name": "simpleeventbusjs",
   "version": "0.0.1",
   "description": "Simple Pub/Sub Event Bus as mediator pattern",
   "main": "EventBus.js",
@@ -12,5 +12,13 @@
     "mediator"
   ],
   "author": "xfoxawy@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfoxawy/eventbusjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xfoxawy/eventbusjs/issues"
+  },
+  "homepage": "https://github.com/xfoxawy/eventbusjs#readme"
 }
