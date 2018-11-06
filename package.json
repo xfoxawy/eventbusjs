@@ -1,0 +1,16 @@
+{
+  "name": "eventbusjs",
+  "version": "0.0.1",
+  "description": "Simple Pub/Sub Event Bus as mediator pattern",
+  "main": "EventBus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eventbus",
+    "pub/sub",
+    "mediator"
+  ],
+  "author": "xfoxawy@gmail.com",
+  "license": "MIT"
+}
