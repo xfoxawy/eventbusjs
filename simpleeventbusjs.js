@@ -47,6 +47,15 @@ EventBus.prototype.pushEvent = function(channel, event, data){
         }
 };
 
+EventBus.prototype.subscribeToAll = function(listner) {
+    let channels = Object.keys(this.channels);
+    
+    for(var i = 0; i < channels.length; i++){
+        if(!this.channel_subscribers[channels[i]]) this.channel_subscribers[channels[i]] = [];
+        this.channel_subscribers[channels[i]].push(listner);
+    }
+};
+
 /**
  * [subscribeToChannel description]
  * @param  {[type]} channel [description]
@@ -55,6 +64,7 @@ EventBus.prototype.pushEvent = function(channel, event, data){
  */
 EventBus.prototype.subscribeToChannel = function(channel, listner){
     if(typeof listner !== 'function') throw new Error('can\'t register uncallable');
+    if(channel === "*") this.subscribeToAll(listner);
     if(!this.channel_subscribers[channel]) this.channel_subscribers[channel] = [];
     this.channel_subscribers[channel].push(listner);
 
